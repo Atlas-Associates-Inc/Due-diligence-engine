@@ -362,6 +362,9 @@ A: DDE evaluates the source code, not the badge. A SOC2-certified plaintext-stor
 ## 🗺️ Roadmap
 
 **Recently shipped (v0.3.x)**
+- ✅ **CI Self-Test fix** (2026-05): `action.yml`'s `grep -c` returned exit code 1 on zero matches, which `set -e` + `pipefail` propagated as a job failure. Fixed with `|| FALLBACK="0"` pattern. **DDE Self-Test now green for the first time**
+- ✅ **Scoring formula made explicit in README** (Final Score = Heuristic 30% + AI Average 70%)
+- ✅ **Dependabot fully wired**: created `dependencies` / `security` / `ci` labels and merged PR #23 (checkout v6) / #24 (upload-artifact v7) / #25 (osv-scanner-action v2.3.8)
 - ✅ **Anti-self-bias guardrails**: explicit "the target is NOT DDE itself" warnings in prompt header (prevents AI confusion when DDE is run on another project)
 - ✅ **Red flags clarified**: shown as actionable items for code improvement (NOT factored into score)
 - ✅ **Quick Start simplified** in README (single install command + collapsible alternatives)
