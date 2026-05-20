@@ -12,16 +12,17 @@
 ┌─────────────────────────────────────────────────────────────┐
 │  $ dde prompt --pdf                                         │
 │                                                             │
+│  🌐 Live web research (2026 competitors, funding, CVEs)...  │
 │  Reading codebase...                                        │
 │  Evaluating across 5 dimensions (equal 20% weights)...      │
 │  Building competitive landscape (7 charts × 6 markets)...   │
 │  Researching implementation matrix (30 items × 10 cos.)...  │
-│  Writing competitor selection rationales...                 │
+│  Writing competitor selection rationales (with sources)...  │
 │                                                             │
 │  Score:  [■■■■■■■■■■■■■■■■■■■■■■■■■■□□□□] 82/100  Lv.8     │
 │  Grade:  B  →  Viable with conditions                       │
 │                                                             │
-│  → ~/Downloads/dde_consulting_<project>_<date>.pdf  (22 p.) │
+│  → ~/Downloads/dde_consulting_<project>_<date>.pdf  (24 p.) │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -35,7 +36,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/taka-avantgarde/Due-diligence-engine?style=flat-square&color=5271FF)](https://github.com/taka-avantgarde/Due-diligence-engine/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/taka-avantgarde/Due-diligence-engine?style=flat-square&color=000000)](https://github.com/taka-avantgarde/Due-diligence-engine/issues)
 [![Last Commit](https://img.shields.io/github/last-commit/taka-avantgarde/Due-diligence-engine?style=flat-square&color=5271FF)](https://github.com/taka-avantgarde/Due-diligence-engine/commits/main)
-[![Version](https://img.shields.io/badge/version-v0.3.0-000000?style=flat-square)](https://github.com/taka-avantgarde/Due-diligence-engine/releases)
+[![Version](https://img.shields.io/badge/version-v0.3.2-000000?style=flat-square)](https://github.com/taka-avantgarde/Due-diligence-engine/releases)
 
 [![Repo Views](https://komarev.com/ghpvc/?username=taka-avantgarde&repo=Due-diligence-engine&color=5271FF&style=flat-square&label=Repo+Views)](https://github.com/taka-avantgarde/Due-diligence-engine)
 [![Unique Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Ftaka-avantgarde%2FDue-diligence-engine&count_bg=%23000000&title_bg=%235271FF&icon=github.svg&icon_color=%23FFFFFF&title=Unique+Visitors&edge_flat=true)](https://github.com/taka-avantgarde/Due-diligence-engine)
@@ -125,6 +126,7 @@ macOS Homebrew users: use `python3 -m pip` — the bare `pip` command is no long
 | **Cost** | $0 (uses your IDE AI) | $$$$ (consultant fees) | API fees | $$$$ (subscription) |
 | **Privacy** | Local-only | Local | Sends code to vendor | Sends code to vendor |
 | **Output** | 24-page consulting PDF | Custom report | Inline comments | Web dashboard |
+| **Data Freshness** | ✅ Live web search (2026) + source URLs | Depends on analyst | Training-data only (stale) | Vendor-controlled refresh |
 | **Crypto Depth** | PQXDH / Signal Protocol level | Depends on consultant | Generic | Generic |
 | **Competitive Charts** | 7 + Implementation Matrix | Manual research | None | Limited |
 | **Setup Time** | 1 command | Weeks | Minutes | Days (account/onboarding) |
@@ -147,6 +149,8 @@ Built on the **Atlas Engineering Philosophy**: serious cybersecurity engineering
 across encryption, privacy, communications, and layered defense — read directly
 from the source code. Checkbox compliance (SOC2, MFA, WebAuthn certifications)
 is reference-only, never scored.
+
+**🌐 New in v0.3.2**: Before reading any code, the AI runs **live web searches** for the latest competitor landscape (acquisitions, shutdowns, new entrants), 2026 funding rounds, recent CVEs, and regulatory shifts. Every competitor and every implementation-matrix cell carries a **source URL + verification date**, and the JSON output starts with a `data_freshness` block that tracks every search query. **Training-cutoff-only stale analysis is structurally eliminated.**
 
 ---
 
@@ -342,6 +346,9 @@ A: Yes — see [`action.yml`](action.yml). Add the GitHub Action to PRs for auto
 **Q: How accurate are the competitive charts?**
 A: Charts are AI-researched from public sources (whitepapers, GitHub, blogs, SOC2 reports). Confidence depends on competitor transparency. Use `?` (unknown) liberally — false positives damage credibility more than gaps.
 
+**Q: Isn't competitor data stale? AI training cutoffs are 6-12 months old.**
+A: As of v0.3.2, **STEP 0 "Live Web Research" is mandatory**. Before reading any code, the AI runs WebSearch / WebFetch for 2025-2026 competitor moves (acquisitions, shutdowns, new entrants), latest funding rounds, CVEs, and regulatory shifts. Every competitor and matrix cell carries a `sources` (URL) and `last_verified` (date) field, and the JSON output starts with a `data_freshness` block that tracks every search query executed. When the runtime lacks web search tools, the AI MUST write a `data_cutoff_warning` — **no silent stale output by design**.
+
 **Q: Why "Atlas Engineering Philosophy"?**
 A: DDE is built by Atlas Associates, the company behind Arc Messenger (E2EE messaging with libsignal + PQXDH). The 4-axis evaluation reflects what we actually look for when evaluating tech.
 
@@ -428,6 +435,6 @@ pytest
 
 **Powered by Due Diligence Engine — Takayuki Miyano / Atlas Associates**
 
-`v0.3.0` — 5-dimension scoring · Competitor rationales · AIDD-era philosophy
+`v0.3.2` — 🌐 Live web research · 5-dimension scoring · Competitor rationales · AIDD-era philosophy
 
 </div>
