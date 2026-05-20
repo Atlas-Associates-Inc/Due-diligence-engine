@@ -362,6 +362,8 @@ A: DDE evaluates the source code, not the badge. A SOC2-certified plaintext-stor
 ## 🗺️ Roadmap
 
 **Recently shipped (v0.3.x)**
+- ✅ **Live Web Research mandate** (2026-05, STEP 0): added `_WEB_RESEARCH_MANDATE` to the top of every consulting prompt — AI MUST run WebSearch/WebFetch on competitor landscape, funding, tech trends, CVEs, and regulation **before** reading code. JSON output now includes a `data_freshness` block (search date, queries executed, sources consulted) plus per-competitor and per-matrix-cell `sources` / `last_verified` fields. Eliminates training-cutoff-only stale analysis
+- ✅ **Prompt typo fixes**: "6 dimensions" → "5 dimensions" and "5つのチャート" → "7つのチャート" in JA consulting prompt
 - ✅ **CI Self-Test fix** (2026-05): `action.yml`'s `grep -c` returned exit code 1 on zero matches, which `set -e` + `pipefail` propagated as a job failure. Fixed with `|| FALLBACK="0"` pattern. **DDE Self-Test now green for the first time**
 - ✅ **Scoring formula made explicit in README** (Final Score = Heuristic 30% + AI Average 70%)
 - ✅ **Dependabot fully wired**: created `dependencies` / `security` / `ci` labels and merged PR #23 (checkout v6) / #24 (upload-artifact v7) / #25 (osv-scanner-action v2.3.8)
