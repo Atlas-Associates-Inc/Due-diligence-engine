@@ -71,16 +71,6 @@ jobs:
             ./
         continue-on-error: true
 
-  secret-scan:
-    name: Secret Scan (gitleaks)
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-
-      - name: Run gitleaks
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # 注: secret-scan は GitHub native Secret Scanning + Push Protection に移行
+  # （public リポは無料・200+ プロバイダーのトークンパターンをカバー）
+  # 旧 gitleaks-action は組織アカウントで有料ライセンス必須化されたため撤去

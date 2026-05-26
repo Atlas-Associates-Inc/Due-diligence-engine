@@ -319,7 +319,7 @@ dde analyze owner/repo
 | **Local-only processing** | `dde prompt` never sends data anywhere |
 | **No source code in reports** | PDFs contain findings only |
 | **API 0-day retention** | `dde analyze` uses no-retention endpoints |
-| **Automated security CI** | CodeQL · Dependabot · pip-audit · safety · osv-scanner · gitleaks |
+| **Automated security CI** | CodeQL · Dependabot · pip-audit · safety · osv-scanner · GitHub Secret Scanning |
 | **Branch protection** | `main` requires PR + CI + secret push protection |
 | **Private repo access via PAT** | Used in memory once, never stored |
 
@@ -350,7 +350,7 @@ A: Charts are AI-researched from public sources (whitepapers, GitHub, blogs, SOC
 A: As of v0.3.2, **STEP 0 "Live Web Research" is mandatory**. Before reading any code, the AI runs WebSearch / WebFetch for 2025-2026 competitor moves (acquisitions, shutdowns, new entrants), latest funding rounds, CVEs, and regulatory shifts. Every competitor and matrix cell carries a `sources` (URL) and `last_verified` (date) field, and the JSON output starts with a `data_freshness` block that tracks every search query executed. When the runtime lacks web search tools, the AI MUST write a `data_cutoff_warning` — **no silent stale output by design**.
 
 **Q: Why "Atlas Engineering Philosophy"?**
-A: DDE is built by Atlas Associates, the company behind Arc Messenger (E2EE messaging with libsignal + PQXDH). The 4-axis evaluation reflects what we actually look for when evaluating tech.
+A: DDE is built by **Atlas Associates Inc**, the company behind Arc Messenger (E2EE messaging with libsignal + PQXDH). The 4-axis evaluation reflects what we actually look for when evaluating tech.
 
 **Q: Can I customize the scoring weights?**
 A: The 5-dimension weights are equal 20% each (balanced, simple, interpretable). Atlas 4-axis weights (20/20/5/55) reflect Atlas philosophy and are also fixed. Sub-item weights within Security Strength adjust by industry context.
