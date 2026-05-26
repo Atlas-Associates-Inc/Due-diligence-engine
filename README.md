@@ -39,7 +39,6 @@
 [![Version](https://img.shields.io/badge/version-v0.3.2-000000?style=flat-square)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/releases)
 
 [![Repo Views](https://komarev.com/ghpvc/?username=taka-avantgarde&repo=Due-diligence-engine&color=5271FF&style=flat-square&label=Repo+Views)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine)
-[![Unique Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FAtlas-Associates-Inc%2FDue-diligence-engine&count_bg=%23000000&title_bg=%235271FF&icon=github.svg&icon_color=%23FFFFFF&title=Unique+Visitors&edge_flat=true)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine)
 
 [**English**](README.md) · [日本語](README.ja.md)
 
