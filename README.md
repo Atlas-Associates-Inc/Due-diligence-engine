@@ -427,13 +427,15 @@ pytest
 
 ## 📜 License
 
-[Apache License 2.0](LICENSE) — Copyright © 2026 Takayuki Miyano / Atlas Associates
+[Apache License 2.0](LICENSE) — Copyright © 2026 [Takayuki Miyano](https://github.com/taka-avantgarde) / [Atlas Associates Inc](https://github.com/Atlas-Associates-Inc)
 
 ---
 
 <div align="center">
 
-**Powered by Due Diligence Engine — Takayuki Miyano / Atlas Associates**
+**Powered by Due Diligence Engine**
+
+Created by [Takayuki Miyano](https://github.com/taka-avantgarde) — [Atlas Associates Inc](https://github.com/Atlas-Associates-Inc)
 
 `v0.3.2` — 🌐 Live web research · 5-dimension scoring · Competitor rationales · AIDD-era philosophy
 

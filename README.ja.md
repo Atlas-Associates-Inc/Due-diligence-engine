@@ -424,13 +424,15 @@ pytest
 
 ## 📜 ライセンス
 
-[Apache License 2.0](LICENSE) — Copyright © 2026 Takayuki Miyano / Atlas Associates
+[Apache License 2.0](LICENSE) — Copyright © 2026 [Takayuki Miyano](https://github.com/taka-avantgarde) / [Atlas Associates Inc](https://github.com/Atlas-Associates-Inc)
 
 ---
 
 <div align="center">
 
-**Powered by Due Diligence Engine — Takayuki Miyano / Atlas Associates**
+**Powered by Due Diligence Engine**
+
+Created by [Takayuki Miyano](https://github.com/taka-avantgarde) — [Atlas Associates Inc](https://github.com/Atlas-Associates-Inc)
 
 `v0.3.2` — 🌐 ライブ Web 調査 · 5 次元スコアリング · 競合選定理由 · AIDD 時代哲学
 

@@ -9,7 +9,12 @@ description = "AI-powered technical due diligence CLI — PDF-first, zero API ke
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "Apache-2.0" }
-authors = [{ name = "Takayuki Miyano / Atlas Associates" }]
+authors = [
+    { name = "Takayuki Miyano", email = "taka@atlasassociates.io" },
+]
+maintainers = [
+    { name = "Atlas Associates Inc" },
+]
 
 dependencies = [
     "anthropic>=0.45.0",
