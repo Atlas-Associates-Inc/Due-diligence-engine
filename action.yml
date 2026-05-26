@@ -1,6 +1,6 @@
 name: 'Due Diligence Engine'
 description: 'AI-powered technical due diligence for startup codebases. Paste a GitHub URL → get a score.'
-author: 'taka-avantgarde'
+author: 'Atlas Associates Inc'
 
 branding:
   icon: 'shield'

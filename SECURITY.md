@@ -16,7 +16,7 @@ Only the latest release on `main` is actively maintained. Please always use the 
 
 ### Alternative: GitHub Security Advisory
 
-Use the ["Report a vulnerability"](https://github.com/taka-avantgarde/Due-diligence-engine/security/advisories/new) button on the Security tab to submit privately.
+Use the ["Report a vulnerability"](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/security/advisories/new) button on the Security tab to submit privately.
 
 ## Scope
 

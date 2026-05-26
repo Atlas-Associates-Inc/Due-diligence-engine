@@ -33,13 +33,13 @@
 [![CodeQL](https://img.shields.io/badge/Security-CodeQL_·_Dependabot_·_pip--audit-5271FF.svg?style=for-the-badge&logo=github&logoColor=white)](SECURITY.md)
 [![PDF](https://img.shields.io/badge/Output-PDF_First-000000.svg?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](#)
 
-[![GitHub stars](https://img.shields.io/github/stars/taka-avantgarde/Due-diligence-engine?style=flat-square&color=5271FF)](https://github.com/taka-avantgarde/Due-diligence-engine/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/taka-avantgarde/Due-diligence-engine?style=flat-square&color=000000)](https://github.com/taka-avantgarde/Due-diligence-engine/issues)
-[![Last Commit](https://img.shields.io/github/last-commit/taka-avantgarde/Due-diligence-engine?style=flat-square&color=5271FF)](https://github.com/taka-avantgarde/Due-diligence-engine/commits/main)
-[![Version](https://img.shields.io/badge/version-v0.3.2-000000?style=flat-square)](https://github.com/taka-avantgarde/Due-diligence-engine/releases)
+[![GitHub stars](https://img.shields.io/github/stars/Atlas-Associates-Inc/Due-diligence-engine?style=flat-square&color=5271FF)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/Atlas-Associates-Inc/Due-diligence-engine?style=flat-square&color=000000)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/Atlas-Associates-Inc/Due-diligence-engine?style=flat-square&color=5271FF)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/commits/main)
+[![Version](https://img.shields.io/badge/version-v0.3.2-000000?style=flat-square)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/releases)
 
-[![Repo Views](https://komarev.com/ghpvc/?username=taka-avantgarde&repo=Due-diligence-engine&color=5271FF&style=flat-square&label=Repo+Views)](https://github.com/taka-avantgarde/Due-diligence-engine)
-[![Unique Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Ftaka-avantgarde%2FDue-diligence-engine&count_bg=%23000000&title_bg=%235271FF&icon=github.svg&icon_color=%23FFFFFF&title=Unique+Visitors&edge_flat=true)](https://github.com/taka-avantgarde/Due-diligence-engine)
+[![Repo Views](https://komarev.com/ghpvc/?username=taka-avantgarde&repo=Due-diligence-engine&color=5271FF&style=flat-square&label=Repo+Views)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine)
+[![Unique Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FAtlas-Associates-Inc%2FDue-diligence-engine&count_bg=%23000000&title_bg=%235271FF&icon=github.svg&icon_color=%23FFFFFF&title=Unique+Visitors&edge_flat=true)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine)
 
 [**English**](README.md) · [日本語](README.ja.md)
 
@@ -52,7 +52,7 @@
 **Install once:**
 
 ```bash
-python3 -m pip install --no-cache-dir git+https://github.com/taka-avantgarde/Due-diligence-engine.git
+python3 -m pip install --no-cache-dir git+https://github.com/Atlas-Associates-Inc/Due-diligence-engine.git
 ```
 
 **Run from your project directory:**
@@ -68,7 +68,7 @@ Use any AI-powered IDE terminal (Claude Code / Cursor / Copilot). Your AI reads 
 
 Linux / venv / older macOS short form:
 ```bash
-pip3 install --no-cache-dir git+https://github.com/taka-avantgarde/Due-diligence-engine.git
+pip3 install --no-cache-dir git+https://github.com/Atlas-Associates-Inc/Due-diligence-engine.git
 ```
 
 macOS Homebrew users: use `python3 -m pip` — the bare `pip` command is no longer installed by Homebrew Python 3.12+.
@@ -404,7 +404,7 @@ A: DDE evaluates the source code, not the badge. A SOC2-certified plaintext-stor
 - 🚧 Industry-specific evaluation packs (medical, fintech, gaming presets)
 - 🚧 PyPI / Homebrew distribution
 
-Open an [issue](https://github.com/taka-avantgarde/Due-diligence-engine/issues) to suggest features or report bugs.
+Open an [issue](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/issues) to suggest features or report bugs.
 
 ---
 
@@ -413,7 +413,7 @@ Open an [issue](https://github.com/taka-avantgarde/Due-diligence-engine/issues) 
 Contributions welcome! The codebase is small and well-tested:
 
 ```bash
-git clone https://github.com/taka-avantgarde/Due-diligence-engine
+git clone https://github.com/Atlas-Associates-Inc/Due-diligence-engine
 cd Due-diligence-engine
 python3 -m pip install -e ".[dev]"
 pytest
