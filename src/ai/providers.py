@@ -215,7 +215,7 @@ class OpenAIProvider(AIProvider):
 
 # デフォルトモデルID定義
 _DEFAULT_MODELS = {
-    "claude": "claude-sonnet-4-20250514",
+    "claude": "claude-sonnet-4-6",  # 2026-05 更新 (claude-sonnet-4-20250514 は 2026-06-15 retire)
     "gemini": "gemini-2.0-flash",
     "chatgpt": "gpt-4o",
 }

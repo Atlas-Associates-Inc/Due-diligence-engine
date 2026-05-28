@@ -206,7 +206,7 @@ class SiteScorer:
 
         client = anthropic.Anthropic(api_key=api_key)
         message = client.messages.create(
-            model="claude-haiku-4-5",  # 高速・低コスト
+            model="claude-haiku-4-5-20251001",  # 高速・低コスト (pinned snapshot)
             max_tokens=2048,
             messages=[{"role": "user", "content": prompt}],
         )

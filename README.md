@@ -36,7 +36,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/Atlas-Associates-Inc/Due-diligence-engine?style=flat-square&color=5271FF)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/Atlas-Associates-Inc/Due-diligence-engine?style=flat-square&color=000000)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/issues)
 [![Last Commit](https://img.shields.io/github/last-commit/Atlas-Associates-Inc/Due-diligence-engine?style=flat-square&color=5271FF)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/commits/main)
-[![Version](https://img.shields.io/badge/version-v0.3.2-000000?style=flat-square)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/releases)
+[![Version](https://img.shields.io/badge/version-v0.3.3-000000?style=flat-square)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/releases)
 
 [![Repo Views](https://komarev.com/ghpvc/?username=taka-avantgarde&repo=Due-diligence-engine&color=5271FF&style=flat-square&label=Repo+Views)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine)
 
@@ -83,7 +83,7 @@ macOS Homebrew users: use `python3 -m pip` — the bare `pip` command is no long
 
 **Recommended setup:**
 
-- **Spin up the most capable model available** in your IDE (Claude Opus 4.x, GPT-5, Gemini 2.5 Pro, etc.)
+- **Spin up the most capable model available** in your IDE (Claude Opus 4.7, GPT-5, Gemini 2.5 Pro, etc.)
 - **Paste `dde prompt --pdf`** into the terminal
 - **Go grab a coffee** ☕ — the AI will read hundreds of files, evaluate across
   9+ dimensions, research 5-10 competitors globally, and build a 24-page consulting PDF
@@ -436,6 +436,6 @@ pytest
 
 Created by [Takayuki Miyano](https://github.com/taka-avantgarde) — [Atlas Associates Inc](https://github.com/Atlas-Associates-Inc)
 
-`v0.3.2` — 🌐 Live web research · 5-dimension scoring · Competitor rationales · AIDD-era philosophy
+`v0.3.3` — 🆕 Claude Opus 4.7 / Sonnet 4.6 / Haiku 4.5 · 🌐 Live web research · 5-dimension scoring · AIDD-era philosophy
 
 </div>

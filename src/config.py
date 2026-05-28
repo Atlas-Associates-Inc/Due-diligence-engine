@@ -18,27 +18,28 @@ class ModelConfig:
     max_tokens: int = 4096
 
 
-# Pricing as of 2026-03 (illustrative; update as Anthropic changes pricing)
+# Pricing as of 2026-05 (公式ドキュメント準拠; Anthropic の値上げ/値下げに合わせて更新)
+# 注: 旧 Opus 4 / Sonnet 4 (20250514) は 2026-06-15 に retire されるため移行必須
 MODELS = {
     "haiku": ModelConfig(
-        model_id="claude-haiku-4-5-20250315",
+        model_id="claude-haiku-4-5-20251001",
         purpose="scan",
-        input_cost_per_mtok=0.80,
-        output_cost_per_mtok=4.00,
+        input_cost_per_mtok=1.00,
+        output_cost_per_mtok=5.00,
         max_tokens=4096,
     ),
     "sonnet": ModelConfig(
-        model_id="claude-sonnet-4-20250514",
+        model_id="claude-sonnet-4-6",
         purpose="analyze",
         input_cost_per_mtok=3.00,
         output_cost_per_mtok=15.00,
         max_tokens=8192,
     ),
     "opus": ModelConfig(
-        model_id="claude-opus-4-20250514",
+        model_id="claude-opus-4-7",
         purpose="judge",
-        input_cost_per_mtok=15.00,
-        output_cost_per_mtok=75.00,
+        input_cost_per_mtok=5.00,   # Opus 4.7 で $15→$5 に大幅減（公式値下げ）
+        output_cost_per_mtok=25.00, # Opus 4.7 で $75→$25 に大幅減
         max_tokens=4096,
     ),
 }
