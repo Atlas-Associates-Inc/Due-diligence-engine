@@ -36,7 +36,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/Atlas-Associates-Inc/Due-diligence-engine?style=flat-square&color=5271FF)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/Atlas-Associates-Inc/Due-diligence-engine?style=flat-square&color=000000)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/issues)
 [![Last Commit](https://img.shields.io/github/last-commit/Atlas-Associates-Inc/Due-diligence-engine?style=flat-square&color=5271FF)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/commits/main)
-[![Version](https://img.shields.io/badge/version-v0.3.3-000000?style=flat-square)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/releases)
+[![Version](https://img.shields.io/badge/version-v0.3.4-000000?style=flat-square)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/releases)
 
 [![Repo Views](https://komarev.com/ghpvc/?username=taka-avantgarde&repo=Due-diligence-engine&color=5271FF&style=flat-square&label=Repo+Views)](https://github.com/Atlas-Associates-Inc/Due-diligence-engine)
 
@@ -83,7 +83,7 @@ macOS Homebrew ユーザーは必ず `python3 -m pip` を使用してくださ�
 
 **推奨セットアップ:**
 
-- **IDE 内で利用可能な最高性能モデルを起動**（Claude Opus 4.7 / GPT-5 / Gemini 2.5 Pro 等）
+- **IDE 内で利用可能な最高性能モデルを起動**（Claude Opus 4.8 / GPT-5 / Gemini 2.5 Pro 等）
 - **`dde prompt --pdf --lang ja` をターミナルにペースト**
 - **コーヒー一杯の時間 ☕ を** — AI が数百のファイルを読み、9軸以上で評価し、
   世界の競合 5〜10 社を調査し、22 ページのコンサル PDF を構築します
@@ -453,6 +453,6 @@ pytest
 
 Created by [Takayuki Miyano](https://github.com/taka-avantgarde) — [Atlas Associates Inc](https://github.com/Atlas-Associates-Inc)
 
-`v0.3.3` — 🆕 Claude Opus 4.7 / Sonnet 4.6 / Haiku 4.5 対応 · 🌐 ライブ Web 調査 · 5 次元スコアリング · AIDD 時代哲学
+`v0.3.4` — 🆕 Claude Opus 4.8 / Sonnet 4.6 / Haiku 4.5 対応 · 🌐 ライブ Web 調査 · 5 次元スコアリング · AIDD 時代哲学
 
 </div>

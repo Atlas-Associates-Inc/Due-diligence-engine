@@ -36,10 +36,10 @@ MODELS = {
         max_tokens=8192,
     ),
     "opus": ModelConfig(
-        model_id="claude-opus-4-7",
+        model_id="claude-opus-4-8",
         purpose="judge",
-        input_cost_per_mtok=5.00,   # Opus 4.7 で $15→$5 に大幅減（公式値下げ）
-        output_cost_per_mtok=25.00, # Opus 4.7 で $75→$25 に大幅減
+        input_cost_per_mtok=5.00,   # Opus 4.8: $5 / MTok（4.7 と同水準）
+        output_cost_per_mtok=25.00, # Opus 4.8: $25 / MTok
         max_tokens=4096,
     ),
 }
