@@ -103,6 +103,26 @@ macOS Homebrew users: use `python3 -m pip` — the bare `pip` command is no long
 
 ---
 
+## 💻 Where Does DDE Run — Use the AI You Already Have
+
+DDE generates a structured prompt. **Any AI agent that can read files and execute shell commands** can run it. No DDE-specific integration, plugin, or login required.
+
+**Verified working** (official docs + tested, 2026-05):
+- ✅ [**Claude Code**](https://code.claude.com/docs/en/overview) (CLI / VS Code / JetBrains / Desktop / Web — Anthropic official)
+- ✅ [**GitHub Copilot Agent Mode**](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/asking-github-copilot-questions-in-your-ide) (VS Code / Visual Studio / JetBrains / Xcode / Eclipse — generally available)
+
+**Should work** (requirements: file read + shell exec + ideally web search):
+- Cursor Agent, Gemini Code Assist, Continue.dev, Cody (Sourcegraph), Aider, Windsurf, Amazon Q Developer, JetBrains AI Assistant, and similar agentic terminals.
+
+> ✅ If you already use any of the above, you're one `pip install` away from running DDE today.
+> Confirmed a specific terminal works? Let us know in an [issue](https://github.com/Atlas-Associates-Inc/Due-diligence-engine/issues).
+
+### 💰 Zero added cost
+
+**You only pay for the AI subscription you already have.** Claude Code Pro / GitHub Copilot / Cursor Pro / Gemini Advanced — DDE runs inside your existing AI's allowance. No DDE pricing tiers, no extra API keys, no hidden fees, ever.
+
+---
+
 ## 👥 Who Is This For?
 
 | User | Use Case | Time Saved |
