@@ -388,6 +388,9 @@ A: DDE evaluates the source code, not the badge. A SOC2-certified plaintext-stor
 ## 🗺️ Roadmap
 
 **Recently shipped (v0.3.x)**
+- ✅ **PDF chart polish + label overlap fix** (2026-05, v0.3.5): all bars across Score Dashboard / Tech Level / Competitive / Matrix charts redesigned as modern rounded pill shapes. Long Japanese labels (e.g. 「アーキテクチャ品質（セキュリティ含む）」) that overlapped the bars are fixed by widening the label area (verified by rendering + visually inspecting each PDF page)
+- ✅ **Claude Opus 4.8 upgrade** (2026-05, v0.3.3–4): judge tier moved Opus 4.7→4.8 (Sonnet 4.6 / Haiku 4.5 also refreshed). Avoids the 2026-06-15 retirement of legacy Opus 4 / Sonnet 4 (20250514) and reflects the Opus price drop ($15→$5 input)
+- ✅ **Transfer to Atlas-Associates-Inc org** (2026-05, v0.3.4–5): repo moved taka-avantgarde → Atlas-Associates-Inc. All URLs updated, author credit unified to Takayuki Miyano (@taka-avantgarde) + Atlas Associates Inc, gitleaks → GitHub native Secret Scanning
 - ✅ **Live Web Research mandate** (2026-05, STEP 0): added `_WEB_RESEARCH_MANDATE` to the top of every consulting prompt — AI MUST run WebSearch/WebFetch on competitor landscape, funding, tech trends, CVEs, and regulation **before** reading code. JSON output now includes a `data_freshness` block (search date, queries executed, sources consulted) plus per-competitor and per-matrix-cell `sources` / `last_verified` fields. Eliminates training-cutoff-only stale analysis
 - ✅ **Prompt typo fixes**: "6 dimensions" → "5 dimensions" and "5つのチャート" → "7つのチャート" in JA consulting prompt
 - ✅ **CI Self-Test fix** (2026-05): `action.yml`'s `grep -c` returned exit code 1 on zero matches, which `set -e` + `pipefail` propagated as a job failure. Fixed with `|| FALLBACK="0"` pattern. **DDE Self-Test now green for the first time**
