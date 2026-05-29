@@ -259,7 +259,7 @@ _PDF_I18N = {
         "confidence_low": "L",
         # Atlas Optimization Assessment (v2.0)
         "atlas_four_axis": "Atlas Optimization Assessment",
-        "atlas_subtitle": "Arc engineering philosophy — 4-axis evaluation (parallel to 6-dimension scoring)",
+        "atlas_subtitle": "Arc engineering philosophy — 4-axis evaluation (parallel to 5-dimension scoring)",
         "atlas_overall": "Atlas Composite Score",
         "atlas_industry_context": "Industry Context",
         "axis_performance": "Performance",
@@ -412,7 +412,7 @@ _PDF_I18N = {
         "invest_pass": "見送り",
         "invest_strong_pass": "強く見送り",
         "score_dashboard": "スコアダッシュボード",
-        "score_dashboard_subtitle": "6次元評価の概要",
+        "score_dashboard_subtitle": "5次元評価の概要",
         # Site Verification
         "site_verification": "サイト検証",
         "site_verification_subtitle": "Webサイト主張 vs コードベース検証",
@@ -464,7 +464,7 @@ _PDF_I18N = {
         "confidence_low": "L",
         # Atlas 最適化評価 (v2.0)
         "atlas_four_axis": "Atlas 最適化評価",
-        "atlas_subtitle": "Arc エンジニアリング哲学 — 4軸並列評価（既存6次元と並列）",
+        "atlas_subtitle": "Arc エンジニアリング哲学 — 4軸並列評価（既存5次元と並列）",
         "atlas_overall": "Atlas 総合スコア",
         "atlas_industry_context": "業界コンテキスト",
         "axis_performance": "高速化",
@@ -1685,7 +1685,7 @@ class PDFReportGenerator:
 
     # Atlas Associates Inc. credit — hardcoded, not configurable.
     # This attribution is required by the license and must not be removed.
-    _CREDIT = "Powered by Due Diligence Engine \u2014 Takayuki Miyano / Atlas Associates"
+    _CREDIT = "Powered by Due Diligence Engine \u2014 Takayuki Miyano / Atlas Associates Inc"
 
     def _add_cover_bg(self, canvas, doc) -> None:
         """Draw dark background + logo on cover page, then add standard footer."""
@@ -1772,7 +1772,7 @@ class PDFReportGenerator:
     # ===================================================================
 
     def _build_score_dashboard(self, cr) -> list:
-        """Score dashboard with overall score + 6-dimension horizontal bar chart."""
+        """Score dashboard with overall score + 5-dimension horizontal bar chart."""
         t = self._t
         s = self._styles
         elements: list = []
@@ -1859,9 +1859,9 @@ class PDFReportGenerator:
             return elements
 
         # Drawing dimensions
-        bar_max_w = 280  # max bar width in points
+        bar_max_w = 250  # max bar width in points (narrowed to widen label area)
         row_h = 44       # height per row (increased for description line)
-        label_w = 140    # label area width
+        label_w = 170    # label area width (widened to fit long JA labels w/o overlap)
         chart_w = label_w + bar_max_w + 80  # total width
         chart_h = len(dims) * row_h + 10
 
@@ -1872,12 +1872,13 @@ class PDFReportGenerator:
 
             # Dimension label (left, bold)
             font_name = "HeiseiKakuGo-W5" if self._lang == "ja" else "Helvetica-Bold"
-            d.add(String(0, y + 4, name, fontName=font_name, fontSize=9,
+            d.add(String(0, y + 4, name, fontName=font_name, fontSize=8.5,
                          fillColor=COLOR_TEXT))
 
-            # Dimension description (below label, small gray text)
+            # Dimension description (below label, small gray text — truncated to label width)
             desc_font = "HeiseiMin-W3" if self._lang == "ja" else "Helvetica"
-            d.add(String(0, y - 8, desc, fontName=desc_font, fontSize=6.5,
+            desc_fit = desc if len(desc) <= 22 else desc[:21] + "…"
+            d.add(String(0, y - 8, desc_fit, fontName=desc_font, fontSize=6.5,
                          fillColor=COLOR_TEXT_DIM))
 
             # Background bar (gray track)
@@ -2282,8 +2283,8 @@ class PDFReportGenerator:
         if dim_levels:
             label_font = "HeiseiKakuGo-W5" if self._lang == "ja" else "Helvetica-Bold"
             val_font = "Helvetica-Bold"
-            label_w = 150
-            seg_w = 24
+            label_w = 172
+            seg_w = 22
             gap = 2
             row_h = 26
             chart_w = label_w + 10 * (seg_w + gap) + 80
