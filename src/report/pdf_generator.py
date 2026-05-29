@@ -1881,9 +1881,9 @@ class PDFReportGenerator:
             d.add(String(0, y - 8, desc_fit, fontName=desc_font, fontSize=6.5,
                          fillColor=COLOR_TEXT_DIM))
 
-            # Background bar (gray track)
-            d.add(Rect(label_w, y, bar_max_w, 16,
-                        fillColor=colors.HexColor("#e2e8f0"),
+            # Background bar (gray track) — rounded for a modern pill look
+            d.add(Rect(label_w, y, bar_max_w, 16, rx=8, ry=8,
+                        fillColor=colors.HexColor("#eef2f7"),
                         strokeColor=None, strokeWidth=0))
 
             # Score bar (Arc brand: black + sky blue dominant)
@@ -1896,7 +1896,8 @@ class PDFReportGenerator:
                 bar_color = colors.HexColor("#000000")    # pure black
             else:
                 bar_color = colors.HexColor("#6b2a2a")    # muted red (warning)
-            d.add(Rect(label_w, y, bar_w, 16,
+            bar_radius = min(8, bar_w / 2)  # clamp radius so thin bars don't distort
+            d.add(Rect(label_w, y, bar_w, 16, rx=bar_radius, ry=bar_radius,
                         fillColor=bar_color,
                         strokeColor=None, strokeWidth=0))
 
@@ -2305,7 +2306,7 @@ class PDFReportGenerator:
                         )
                     else:
                         fill = colors.HexColor("#e2e8f0")
-                    dgrid.add(Rect(x, y, seg_w, 14,
+                    dgrid.add(Rect(x, y, seg_w, 14, rx=3, ry=3,
                                    fillColor=fill, strokeColor=None, strokeWidth=0))
                 # Lv.X/10 text right
                 text_x = label_w + 10 * (seg_w + gap) + 6
@@ -2332,7 +2333,7 @@ class PDFReportGenerator:
                 fill = COLOR_ACCENT
             else:
                 fill = colors.HexColor("#e2e8f0")
-            d.add(Rect(x, 4, seg_w, seg_h,
+            d.add(Rect(x, 4, seg_w, seg_h, rx=3, ry=3,
                         fillColor=fill, strokeColor=None, strokeWidth=0))
 
         text_x = 10 * (seg_w + gap) + 8
@@ -3057,7 +3058,7 @@ class PDFReportGenerator:
             """Build a single horizontal bar drawing."""
             d = Drawing(bar_max_w, 16)
             # Background track
-            d.add(Rect(0, 0, bar_max_w, 16,
+            d.add(Rect(0, 0, bar_max_w, 16, rx=8, ry=8,
                        fillColor=colors.HexColor("#e2e8f0"),
                        strokeColor=None, strokeWidth=0))
             # Filled portion
@@ -3070,7 +3071,7 @@ class PDFReportGenerator:
                 bar_color = colors.HexColor("#000000")
             else:
                 bar_color = colors.HexColor("#6b2a2a")
-            d.add(Rect(0, 0, bar_w, 16,
+            d.add(Rect(0, 0, bar_w, 16, rx=min(8, bar_w / 2), ry=min(8, bar_w / 2),
                        fillColor=bar_color, strokeColor=None, strokeWidth=0))
             return d
 
@@ -3170,7 +3171,7 @@ class PDFReportGenerator:
 
         def _sub_bar(score_val: float) -> Drawing:
             d = Drawing(bar_max_w, 16)
-            d.add(Rect(0, 0, bar_max_w, 16,
+            d.add(Rect(0, 0, bar_max_w, 16, rx=8, ry=8,
                        fillColor=colors.HexColor("#e2e8f0"),
                        strokeColor=None, strokeWidth=0))
             bar_w = max(2, (score_val / 100) * bar_max_w)
@@ -3182,7 +3183,7 @@ class PDFReportGenerator:
                 bc = colors.HexColor("#000000")
             else:
                 bc = colors.HexColor("#6b2a2a")
-            d.add(Rect(0, 0, bar_w, 16,
+            d.add(Rect(0, 0, bar_w, 16, rx=min(8, bar_w / 2), ry=min(8, bar_w / 2),
                        fillColor=bc, strokeColor=None, strokeWidth=0))
             return d
 
